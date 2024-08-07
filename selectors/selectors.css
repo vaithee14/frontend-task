@@ -1,0 +1,109 @@
+.para {
+  color: blue;
+}
+#login_btn {
+  background-color: darkgoldenrod;
+}
+.mypara,
+#para {
+  font-size: 50px;
+  color: brown;
+}
+/* *{
+    font-family: fantasy;
+} */
+* {
+  font-style: italic;
+}
+h2 {
+  font-size: 50px;
+}
+.my_heading {
+  font-size: 60px;
+}
+#my_id {
+  color: rgb(218, 241, 7);
+}
+
+.paragraph {
+  text-decoration: underline;
+  text-transform: lowercase;
+}
+#colors {
+  color: rgb(110, 8, 8);
+}
+.demopara {
+  direction: rtl;
+}
+#words {
+  word-spacing: 8px;
+}
+.alignwords {
+  text-align: center;
+}
+#textindent {
+  text-indent: 1cm;
+}
+.decorations {
+  text-decoration: underline;
+}
+#transfroms {
+  text-transform: lowercase;
+}
+.wordsspacing {
+  white-space: nowrap;
+}
+.fontproperty {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(189, 3, 127);
+}
+.demofontsize {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 3px;
+}
+#variants {
+  font-variant: small-caps;
+}
+#demoparagraph {
+  font-family: fantasy;
+}
+.demospace {
+  white-space: pre;
+}
+.demotext {
+  text-transform: uppercase;
+  text-decoration: overline;
+}
+.linethrough {
+  text-decoration: line-through;
+  text-align: right;
+}
+.demos {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  font-variant: small-caps;
+  line-height: 1.8;
+  font-style: italic;
+}
+.demotextproperty{
+    color: rgb(0, 81, 255);
+    direction: rtl;
+    letter-spacing: 8px;
+    word-spacing: 8px;
+    text-indent: 1cm;
+    text-align: right;
+    text-decoration: underline;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-shadow: 3px 2px;
+}
+.indent{
+  text-indent: 2cm;
+  line-height: 2.8;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: serif;
+}

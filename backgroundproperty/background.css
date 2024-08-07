@@ -1,0 +1,76 @@
+.bcolor {
+  background-color: yellow;
+  text-align: center;
+}
+.background_property {
+  background-image: url(../images/images.png);
+  height: 500px;
+  width: 500px;
+  border: 1px dashed rgb(160, 75, 134);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.insta {
+  background-image: url(../images/images.jfif);
+  height: 500px;
+  width: 500px;
+  border: 1px dashed rgb(160, 75, 134);
+  background-repeat: repeat;
+  background-position: left center;
+}
+.doll {
+  background-image: url(../images/images.jfif);
+  height: 500px;
+  width: 500px;
+  border: 1px double rgb(2, 61, 20);
+  background-repeat: repeat-x;
+  background-position: right top;
+}
+.image2 {
+  background-image: url(../images/images.jfif);
+  width: 500px;
+  height: 500px;
+  background-repeat: repeat-y;
+  background-position: center bottom;
+  border: 1px dotted rgb(58, 6, 155);
+}
+.image3 {
+  background-image: url(../images/images.jfif);
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  border: 1px dashed rgb(94, 64, 0);
+}
+.image4 {
+  background-image: url(../images/images.jfif);
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  border: 1px dashed rgb(2, 73, 38);
+}
+.image5 {
+  background-image: url(../images/images.jfif);
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  border: 1px dashed rgb(131, 12, 32);
+}
+.image6 {
+  background-image: url(../images/images.jfif);
+  width: 600px;
+  height: 600px;
+  background-repeat: repeat-x;
+  background-position: left center;
+  border: 1px dashed rgb(7, 102, 11);
+}
+.image7 {
+  background-image: url(../images/images.jfif);
+  width: 600px;
+  height: 600px;
+  background-repeat: repeat-y;
+  background-position: right center;
+  border: 1px dashed rgb(71, 37, 4);
+}

@@ -1,0 +1,74 @@
+.card {
+  border: 1px solid black;
+  /* height: 400px; */
+  width: 262px;
+  padding: 10px;
+  text-align: center;
+}
+.twitter {
+  text-align: center;
+}
+.iconname {
+  text-align: center;
+  font-size: 39px;
+}
+.read-more-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  /* border-radius: 20px;
+  width: 170px;
+  padding: 10px;
+   */
+  border-radius: 12px;
+  width: 255px;
+  padding: 16px;
+}
+.card2 {
+  /* border: 1px solid black;
+  height: 400px;
+  width: 262px;
+  padding: 10px;
+  text-align: center; */
+  background-color: rgb(216, 31, 62);
+  /*  */
+}
+.boxpara {
+  text-align: center;
+  padding: 7px;
+}
+.iconname2 {
+  font-size: 39px;
+  color: white;
+}
+.boxpara2 {
+  color: white;
+}
+.read-more-btn2 {
+  background-color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  width: 261px;
+}
+.iconname3 {
+  font-size: 41px;
+}
+.boxpara3 {
+  text-align: center;
+  padding: 10px;
+}
+.readmorebtn3 {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 26px;
+  width: 261px;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+.fa fa-instagram {
+  color: whit;
+}
