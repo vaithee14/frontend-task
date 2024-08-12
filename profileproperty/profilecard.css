@@ -1,7 +1,10 @@
 .border {
   border: 1px solid white;
   width: 100%;
-  /* padding: 20px; */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
 }
 .main-container {
   display: flex;
@@ -19,8 +22,8 @@ body {
   display: flex;
   list-style-type: none;
   column-gap: 50px;
-  /* padding: 9px; */
-  /* justify-content: center; */
+  padding: 9px;
+  justify-content: center;
   justify-items: center;
   color: gray;
   font-size: 12px;
@@ -32,8 +35,10 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
+  /* background-repeat: no-repeat;
+  position: sticky; */
+  /* top: 0; */
 }
-
 .para1 {
   font-family: "Amatic SC", sans-serif;
   color: white;
@@ -384,4 +389,3 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-
