@@ -1,0 +1,62 @@
+@import "./variable.scss";
+.btn {
+  padding: 16px;
+  border: none;
+  background-color: $buttoncolor;
+}
+.sub-btn {
+  padding: 16px;
+  border: none;
+  background-color: $buttoncolor;
+}
+.para {
+  // color: red;
+  background-color: $paragraph-color;
+  font-size: $font-size;
+  text-align: center;
+  color: $stylecolor;
+}
+.para2 {
+  background-color: $paragraph-color;
+}
+.box1 {
+  height: 200px;
+  width: 200px;
+  border: 1px solid rgb(255, 0, 0);
+}
+.box2 {
+  @extend .box1;
+  border-color: rgb(64, 0, 255);
+}
+.box3 {
+  @extend .box1;
+  border-style: dashed;
+}
+// nested
+nav {
+  ul {
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: burlywood;
+  }
+  li {
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 30px;
+  }
+}
+// mixmins
+@mixin changes {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: blueviolet;
+}
+.paragraph {
+  @include changes;
+}
+// mixmins and inhertice
+.text {
+  @extend .paragraph;
+  color: aqua;
+}

@@ -1,0 +1,10 @@
+.border {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box1, .box3, .box2 {
+  border: 1px solid;
+  height: 455px;
+  width: 300px;
+}/*# sourceMappingURL=index.css.map */

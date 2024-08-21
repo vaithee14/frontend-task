@@ -1,0 +1,58 @@
+.btn {
+  padding: 16px;
+  border: none;
+  background-color: yellow;
+}
+
+.sub-btn {
+  padding: 16px;
+  border: none;
+  background-color: yellow;
+}
+
+.para {
+  background-color: red;
+  font-size: 20px;
+  text-align: center;
+  color: yellow;
+}
+
+.para2 {
+  background-color: red;
+}
+
+.box1, .box3, .box2 {
+  height: 200px;
+  width: 200px;
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.box2 {
+  border-color: rgb(64, 0, 255);
+}
+
+.box3 {
+  border-style: dashed;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  border: 1px solid gray;
+  background-color: burlywood;
+}
+nav li {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 30px;
+}
+
+.paragraph, .text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: blueviolet;
+}
+
+.text {
+  color: aqua;
+}/*# sourceMappingURL=program.css.map */

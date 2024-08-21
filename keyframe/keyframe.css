@@ -1,0 +1,54 @@
+.box {
+  height: 100px;
+  width: 100px;
+  animation: moves 4s infinite alternate;
+}
+@keyframes moves {
+  0% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: aqua;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+.keyframe {
+  border: 1px solid gray;
+  width: 400px;
+  height: 400px;
+}
+.box2 {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  animation: changes 6s infinite ease-in;
+}
+@keyframes changes {
+  0% {
+    top: 0px;
+    left: 0px;
+    background-color: aqua;
+  }
+  25% {
+    top: 0px;
+    left: 200px;
+    background-color: chocolate;
+  }
+  50% {
+    top: 200px;
+    left: 200px;
+    background-color: chartreuse;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+    background-color: brown;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+    background-color: blueviolet;
+  }
+}

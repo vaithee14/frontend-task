@@ -35,9 +35,18 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
+  animation: move 5s infinite;
   /* background-repeat: no-repeat;
   position: sticky; */
   /* top: 0; */
+}
+@keyframes move {
+  0% {
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/bg_1.jpg);
+  }
+  100% {
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/bg_2.jpg);
+  }
 }
 .para1 {
   font-family: "Amatic SC", sans-serif;
