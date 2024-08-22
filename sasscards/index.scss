@@ -1,19 +1,69 @@
 @import "./_variable.scss";
-.border {
-//   border: 1px solid;
-//   width: 100%;
-//   height: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.box1 {
-  border: 1px solid;
-  height: 455px;
+.box {
+  border: 1px solid gray;
   width: 300px;
+  height: 516px;
 }
-.box2 {
-  @extend .box1;
+.main-container {
+  display: flex;
+  column-gap: 93px;
 }
-.box3 {
-  @extend .box1;
+.btn {
+  border: none;
+  background-color: skyblue;
+  border-radius: 20px;
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.btn2 {
+  @extend .btn;
+  background-color: rgb(20, 77, 233);
+}
+.btn3 {
+  @extend .btn;
+  background-color: palevioletred;
+}
+section {
+  div {
+    p {
+      font-weight: bold;
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+  }
+}
+@mixin move {
+  color: gray;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: 300;
+}
+.para {
+  @include move;
+}
+.img1 {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 20px;
+  // display: flex;
+  // align-items: center
+}
+.img2 {
+  @extend .img1;
+  margin-top: 10px;
+}
+.img3 {
+  @extend .img1;
+  margin-top: 39px;
+}
+.text {
+  margin-left: 81px;
+  margin-top: -37px;
 }
