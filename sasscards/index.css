@@ -1,13 +1,13 @@
 .box {
-  border: 1px solid gray;
   width: 300px;
-  height: 516px;
+  border-radius: 4px;
+  box-shadow: 0 0px 10px rgb(0, 0, 0);
 }
 
 .main-container {
   display: flex;
-  -moz-column-gap: 93px;
-       column-gap: 93px;
+  -moz-column-gap: 46px;
+       column-gap: 46px;
 }
 
 .btn, .btn3, .btn2 {
@@ -16,7 +16,6 @@
   border-radius: 20px;
   color: white;
   margin-left: 20px;
-  margin-top: 20px;
   text-transform: uppercase;
 }
 
@@ -28,12 +27,11 @@
   background-color: palevioletred;
 }
 
-section div p {
+.border .box .head {
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   margin-left: 20px;
-  margin-top: 20px;
 }
 
 .para {
@@ -42,25 +40,25 @@ section div p {
   margin-left: 20px;
   margin-top: 20px;
   font-weight: 300;
+  font-family: "Roboto", sans-serif;
 }
 
-.img1, .img3, .img2 {
-  height: 40px;
+.img-container {
   width: 40px;
-  border-radius: 50%;
-  margin-left: 20px;
-  margin-top: 20px;
+  height: 40px;
+  border-radius: 55px;
+  padding: 20px;
 }
 
-.img2 {
-  margin-top: 10px;
-}
-
-.img3 {
-  margin-top: 39px;
+.container {
+  display: flex;
 }
 
 .text {
-  margin-left: 81px;
-  margin-top: -37px;
+  font-family: "Roboto", sans-serif;
+}
+
+.text2 {
+  color: gray;
+  margin-top: -12px;
 }/*# sourceMappingURL=index.css.map */
