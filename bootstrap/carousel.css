@@ -1,0 +1,11 @@
+.border {
+  /* border: 1px solid darkblue; */
+  width: 60%;
+  height: 400px;
+  margin: auto;
+}
+.model-border {
+  border: 1px solid darkblue;
+  width: 60%;
+  height: 400px;
+}
