@@ -9,6 +9,26 @@
 body {
   padding: 0px;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+#menuicon {
+  display: none;
+}
+@media (max-width: 789px) {
+  #menuicon {
+    display: block;
+  }
+}
+@media (max-width: 789px) {
+  .background-img {
+    background-position: center;
+  }
+}
+.blog {
+  border: none;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .nav-border {
   border: 1px solid white;
@@ -46,187 +66,86 @@ body {
   letter-spacing: 2px;
   font-family: 300;
 }
-@media (max-width: 680px) {
+@media (max-width: 789px) {
   .menubar {
     display: none;
   }
 }
-.main-border {
-  /* border: 1px solid; */
-  /* height: 700px; */
-  padding-top: 107px;
-  width: 100%;
+.food-fun-content {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.paras {
-  color: gray;
+.image.container {
+  flex: 1;
+}
+.text-container {
+  padding-left: 20px;
+}
+.heading {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+}
+.text-container p {
   font-size: 14px;
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 .book-btn {
   background-color: #ffb606;
-  padding: 13px;
+  padding: 20px;
   border: none;
-  font-weight: bold;
   text-transform: uppercase;
-  cursor: pointer;
+}
+.image-container {
+  width: 607px;
+  height: 615px;
+}
+.border {
+  /* border: 1px solid gray; */
+  margin: auto;
+  width: 80%;
+  height: 600px;
+}
+@media (max-width: 766px) {
+  .food-fun-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 766px) {
+  .text-container {
+    /* padding: 0; */
+    flex-direction: column;
+  }
+}
+@media (max-width: 766px) {
+  .image-container {
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
 }
 .second-background-img {
   background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/food-bg.png);
-  /* width: 100%; */
-  /* height: 887px; */
+  width: 100%;
+  height: 906px;
   background-repeat: no-repeat;
   background-position: right;
-  /* position: relative; */
 }
-.header {
-  font-size: 45px;
-  font-weight: 700;
+.book-btn:hover {
+  cursor: pointer;
 }
-@media (max-width: 640px) {
-  .main-border {
-    display: grid;
-    grid-auto-columns: 1fr;
-  
-  }
-  .welcom-to-foodfun-para{
-    margin-top: 20px;
-    max-width: 100%;
-  }
-
+.delicious-food-para {
+  margin-left: 203px;
+  margin-top: 80px;
 }
-.food-para {
-  margin-left: 154px;
-  margin-top: 82px;
-}
-.sec-para {
-  color: gray;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-}
-@media (max-width: 615px) {
-  .food-para {
-    margin-left: 12px;
-  }
-
-}
-
-.display-flex {
-  display: flex;
-  gap: 27px;
-  margin-top: 120px;
-}
-
-.foods-name {
-  display: flex;
-  justify-content: space-around;
-  color: #131230;
+.headings {
   font-family: "Playfair Display", serif;
-  text-transform: capitalize;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 47px;
 }
-.words {
-  color: gray;
-  font-family: "Roboto", sans-serif;
+.para {
+  color: #555;
   font-size: 14px;
-  margin-left: 40px;
-}
-.food-border2 {
-  /* border: 1px solid gray; */
-  width: 80%;
-  height: 500px;
-  margin: auto;
-  margin-top: 25px;
-}
-.display-flex2 {
-  display: flex;
-  gap: 27px;
-}
-.hover-color:hover {
-  background-color: #ffb606;
-  padding: 15px;
-}
-.background-img-3 {
-  background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/reservation-bg.jpg);
-  height: 400px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Reservation-btn {
-  border: none;
-  background-color: #ffb606;
-  padding: 20px;
-  text-transform: uppercase;
-}
-.texts {
-  text-align: center;
-}
-.content {
-  color: #fff;
-  font-family: "Playfair Display", serif;
-  font-size: 42px;
-  font-weight: 700;
-}
-.offered-para {
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-style: italic;
-  text-transform: capitalize;
-}
-.section {
-  /* border: 1px solid gray; */
-  width: 70%;
-  margin: auto;
-  height: 300px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-.special-deshes-para {
-  font-size: 40px;
-}
-.paragraph {
-  color: gray;
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-size: 14px;
-}
-.food-border3 {
-  border: 1px solid gray;
-  width: 90%;
-  height: 500px;
-  margin: auto;
-  position: relative;
-}
-.line {
-  border-top: 1px solid;
-  width: 176px;
-  margin: 0;
-}
-.numbered-hr {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  left: 119px;
-  font-size: 33px;
-}
-@media (max-width:640px){
-.second-background-img{
-  background-image:none;
-}
-.image-container{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-}
 }
