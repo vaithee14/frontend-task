@@ -58,8 +58,9 @@ body {
   text-align: center;
 }
 .main-heading {
-  font-size: 43px;
+  font-size: 59px;
   font-style: italic;
+  font-family: "Playfair Display", serif;
 }
 .subheading {
   font-size: 13px;
@@ -101,13 +102,12 @@ body {
 }
 .image-container {
   width: 607px;
-  height: 615px;
 }
 .border {
   /* border: 1px solid gray; */
   margin: auto;
   width: 80%;
-  height: 600px;
+  /* height: 600px; */
 }
 @media (max-width: 766px) {
   .food-fun-content {
@@ -129,17 +129,18 @@ body {
 }
 .second-background-img {
   background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/food-bg.png);
-  width: 100%;
-  height: 906px;
+  /* width: 100%; */
   background-repeat: no-repeat;
   background-position: right;
 }
 .book-btn:hover {
   cursor: pointer;
+  background-color: transparent;
+  border-color: #ffb606;
 }
 .delicious-food-para {
-  margin-left: 203px;
-  margin-top: 80px;
+  margin-left: 151px;
+  margin-top: 41px;
 }
 .headings {
   font-family: "Playfair Display", serif;
@@ -148,4 +149,92 @@ body {
 .para {
   color: #555;
   font-size: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 31px;
+  row-gap: 67px;
+}
+.food-container {
+  /* border: 1px solid; */
+  /* height: 931px; */
+  width: 79%;
+  margin: auto;
+  margin-top: 108px;
+}
+.foods-names {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+  font-size: 23px;
+  color: #131230;
+}
+@media (max-width: 800px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .delicious-food-para {
+    margin-left: 0px;
+    padding: 20px;
+  }
+}
+.food-texts {
+  color: #555;
+  font-size: 14px;
+}
+.heading-hovers:hover {
+  background-color: #ffb606;
+  padding: 15px;
+}
+.food-texts:hover {
+  color: black;
+}
+.testy-food-image {
+  background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/reservation-bg.jpg);
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 178px;
+  background-position: center;
+}
+.testy-food-container {
+  position: absolute;
+  left: 27%;
+  top: 25%;
+  color: white;
+  text-align: center;
+}
+.reservation-btn {
+  padding: 20px;
+  background-color: #ffb606;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 700;
+}
+.input-para {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 23px;
+}
+.hero {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+}
+.reservation-btn:hover{
+  background-color: transparent;
+  color: #ffb606;
 }
