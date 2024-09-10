@@ -97,8 +97,8 @@ body {
 .book-btn {
   background-color: #ffb606;
   padding: 20px;
-  border: none;
   text-transform: uppercase;
+  border-color: #ffb606;
 }
 .image-container {
   width: 607px;
@@ -136,7 +136,6 @@ body {
 .book-btn:hover {
   cursor: pointer;
   background-color: transparent;
-  border-color: #ffb606;
 }
 .delicious-food-para {
   margin-left: 151px;
@@ -197,44 +196,72 @@ body {
 }
 .heading-hovers:hover {
   background-color: #ffb606;
-  padding: 15px;
-}
-.food-texts:hover {
-  color: black;
-}
-.testy-food-image {
-  background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/reservation-bg.jpg);
-  width: 100%;
-  height: 500px;
-  background-repeat: no-repeat;
-  position: relative;
-  top: 178px;
-  background-position: center;
+  /* padding: 15px; */
 }
 .testy-food-container {
-  position: absolute;
-  left: 27%;
-  top: 25%;
-  color: white;
+  background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/reservation-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  /* position: relative; */
+  /* top: 162px; */
+  margin-top: 162px;
+}
+.testy-food-head {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+}
+.testy-food-para {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  text-transform: capitalize;
 }
 .reservation-btn {
-  padding: 20px;
   background-color: #ffb606;
+  border-color: #ffb606;
+  padding: 14px;
   text-transform: uppercase;
-  border: none;
-  font-weight: 700;
+  font-weight: 600;
 }
-.input-para {
-  font-family: "Roboto", sans-serif;
-  font-style: italic;
-  font-size: 23px;
-}
-.hero {
-  font-family: "Playfair Display", serif;
-  font-size: 48px;
-}
-.reservation-btn:hover{
+.reservation-btn:hover {
   background-color: transparent;
-  color: #ffb606;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 760px) {
+  .reservation-btn {
+    padding: 8px;
+  }
+}
+.special-deshes-head {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+}
+.special-deshes-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 112px;
+}
+.special-deshes-para {
+  color: gray;
+  font-style: italic;
+  font-size: 13px;
+}
+.side-image-border{
+  border: 1px solid gray;
+  height: 500px;
+}
+.custome-line{
+  width: 169px;
+}
+.arrow-flex{
+  display: flex;
 }
