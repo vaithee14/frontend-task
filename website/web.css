@@ -255,10 +255,53 @@ body {
   font-style: italic;
   font-size: 13px;
 }
-.border4{
-  border: 1px gray solid;
+
+.line {
+  margin-left: 0;
+  width: 15%;
+  border-bottom: 1px solid black;
+  height: 0;
+}
+.green-garlic-para {
+  color: #555;
+  font-size: 12px;
+}
+.garlic-price {
+  color: #ffb606;
+  font-size: 30px;
+}
+.booktable-item {
+  font-size: 13px;
+  font-weight: 600;
+}
+.garlic-head {
+  font-size: 31px;
+}
+.line-para {
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+}
+.flex-property {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border4 {
+  border: 1px solid;
   width: 90%;
-  height: 600px;
+  /* height: 500px; */
   margin: auto;
-  margin-top: 60px;
+}
+
+/*  */
+.container-food {
+  width: 80%;
+  /* height: 500px; */
+  /* border: 1px solid orange; */
+  margin: auto;
+  display: flex;
+}
+.inner-con-food{
+  margin-left: 10%;
 }
