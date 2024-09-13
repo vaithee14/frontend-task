@@ -258,13 +258,12 @@ body {
 
 .line {
   margin-left: 0;
-  width: 15%;
-  border-bottom: 1px solid black;
+  width: 45%;
   height: 0;
 }
 .green-garlic-para {
   color: #555;
-  font-size: 12px;
+  font-size: 15px;
 }
 .garlic-price {
   color: #ffb606;
@@ -273,35 +272,86 @@ body {
 .booktable-item {
   font-size: 13px;
   font-weight: 600;
+  color: #131230;
 }
 .garlic-head {
-  font-size: 31px;
+  font-size: 39px;
+  font-family: "Playfair Display", serif;
 }
 .line-para {
   font-size: 36px;
   display: flex;
   align-items: center;
-}
-.flex-property {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  left: -18px;
+  top: 65px;
 }
 .border4 {
   border: 1px solid;
   width: 90%;
-  /* height: 500px; */
   margin: auto;
 }
 
-/*  */
 .container-food {
-  width: 80%;
+  width: 77%;
   /* height: 500px; */
   /* border: 1px solid orange; */
   margin: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 132px;
+  column-gap: 218px;
 }
-.inner-con-food{
+.inner-con-food {
   margin-left: 10%;
 }
+.number {
+  color: #131230;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 45px;
+}
+.fa-long-arrow-right:hover {
+ color: #ffb606;
+ cursor: pointer;
+ margin-right:4px ;
+}
+
+@media (max-width: 740px) {
+  .container-food {
+    flex-direction: column;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 766px) {
+  .foods-pic {
+    max-width: 100%;
+    height: 100%;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 440px) {
+  .green-garlic-para {
+    font-size: 10px;
+  }
+  .garlic-head {
+    font-size: 25px;
+  }
+  .number {
+    font-size: 20px;
+  }
+  .line-para {
+    position: relative;
+        top: 20px;
+        left: -1px;
+  }
+}
+@media (max-width: 780px) {
+  .item {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
