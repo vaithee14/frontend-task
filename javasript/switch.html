@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>switch case</title>
+    </head>
+
+    <body>
+        <script>
+            grade = prompt("enter your grade")
+            var grade;
+            switch (true) {
+                case (grade >= 90):
+                    console.log("Grade A")
+                    break;
+                case (grade >= 70):
+                    console.log("Grade B");
+                    break;
+                case (grade >= 60):
+                    console.log("Grade C");
+                    break;
+                case (grade >= 35):
+                    console.log("Grade D");
+                    break;
+                default:
+                    console.log("invaild percentage")
+            }
+            let a = 50;
+            let b = 100;
+            a, b = prompt("enter a vaule")
+            switch (true) {
+                case (a > b):
+                    console.log(" a is smaller than")
+                    break;
+                case (b > a):
+                    console.log("b is larger than")
+                    break;
+                default:
+                    console.log("both are the same")
+            }
+            var number = 0;
+            number = prompt("enter a number")
+            switch (true) {
+                case (number > 0):
+                    console.log("this number is positive");
+                    break;
+                case (number < 0):
+                    console.log("this number is negative");
+                    break;
+                default:
+                    console.log("number are same")
+            }
+        </script>
+    </body>
+
+</html>
