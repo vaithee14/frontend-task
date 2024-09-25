@@ -499,15 +499,47 @@ div > .booking-head {
   text-transform: uppercase;
   font-size: 13px;
 }
-.footer-border{
-  background-color:white;
+.footer-border {
+  background-color: #131230;
   height: 500px;
   width: 100%;
+  /* position: relative; */
 }
-.footer-para{
-  color: #555;
-  font-size: 13px;
+.footer-main-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  /* position: absolute; */
+  /* right: 15%; */
+  /* left: 15%; */
 }
-.footer-main-content{
-  display: flex;
+.contact {
+  color: #ffb606;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+.parastyle {
+  color: grey;
+}
+@media (max-width: 768px) {
+  .footer-main-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 61px;
+  }
+  .footer-border {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+.food-button {
+  padding: 10px;
+}
+.icon-box{
+  position: relative;
+}
+.fa-calendar{
+  position: absolute;
+  top: 25%;
 }
