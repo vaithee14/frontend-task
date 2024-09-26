@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String Method </title>
+    </head>
+
+    <body>
+        <script>
+            // length
+            var Demo = "hello world"
+            console.log(Demo.length);
+            console.log(Demo.at(2));
+            // index
+            var Demonumber = "1403200446789098765443"
+            console.log(Demonumber.charAt(3));
+            console.log(Demonumber.at(6));
+            console.log(Demonumber[14]);
+            // to uppercase and lowercase
+            var words = "hello world"
+            console.log(words.toLocaleUpperCase());
+            console.log(words.toLocaleLowerCase());
+            // concat
+            var letter1 = 'hello'
+            var letter2 = 'world'
+            console.log(letter1.concat(letter2));
+            // repeat
+            console.log(Demo.repeat(10));
+            // replace
+            console.log(Demo.replace("hello world", "hi guys"))
+            // trim
+            var trimwords = "        This is trim method    "
+            console.log(trimwords.trim());
+            // console.log(trimwords.trimEnd());
+            // console.log(trimwords.trimStart());
+        </script>
+    </body>
+
+</html>
