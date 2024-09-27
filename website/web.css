@@ -14,14 +14,6 @@ body {
 #menuicon {
   display: none;
 }
-@media (max-width: 789px) {
-  .background-img {
-    background-position: center;
-  }
-  #menuicon {
-    display: block;
-  }
-}
 .blog {
   border: none;
   font-size: 10px;
@@ -59,6 +51,7 @@ body {
   font-size: 59px;
   font-style: italic;
   font-family: "Playfair Display", serif;
+  font-weight: 600;
 }
 @media (max-width: 500px) {
   .main-heading {
@@ -68,11 +61,6 @@ body {
 .subheading {
   font-size: 13px;
   letter-spacing: 2px;
-}
-@media (max-width: 789px) {
-  .menubar {
-    display: none;
-  }
 }
 .food-fun-content {
   display: flex;
@@ -106,14 +94,11 @@ body {
   width: 607px;
 }
 .border {
-  /* border: 1px solid gray; */
   margin: auto;
   width: 80%;
-  /* height: 600px; */
 }
 .second-background-img {
   background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/food-bg.png);
-  /* width: 100%; */
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -140,8 +125,6 @@ body {
   row-gap: 67px;
 }
 .food-container {
-  /* border: 1px solid; */
-  /* height: 931px; */
   width: 79%;
   margin: auto;
   margin-top: 108px;
@@ -180,7 +163,6 @@ body {
 }
 .heading-hovers:hover {
   background-color: #ffb606;
-  /* padding: 15px; */
 }
 .testy-food-container {
   background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/reservation-bg.jpg);
@@ -191,8 +173,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* position: relative; */
-  /* top: 162px; */
   margin-top: 162px;
 }
 .testy-food-head {
@@ -264,7 +244,6 @@ body {
   align-items: center;
   position: relative;
   left: -18px;
-  /* top: 65px; */
 }
 .border4 {
   border: 1px solid;
@@ -274,8 +253,6 @@ body {
 
 .container-food {
   width: 60%;
-  /* height: 500px; */
-  /* border: 1px solid orange; */
   margin: auto;
   display: flex;
   justify-content: center;
@@ -313,12 +290,6 @@ body {
     left: -1px;
   }
 }
-@media (max-width: 780px) {
-  .item {
-    max-width: 100%;
-    height: auto;
-  }
-}
 .fourth-background-img {
   background-image: url(https://preview.colorlib.com/theme/foodfun/assets/images/testimonial-bg.jpg);
   height: 485px;
@@ -326,8 +297,6 @@ body {
   background-size: cover;
 }
 .fourth-img-container {
-  /* height: 485px; */
-  /* width: 100%; */
   position: relative;
   margin-top: 113px;
 }
@@ -365,8 +334,6 @@ body {
   font-size: 14px;
 }
 .main {
-  /* border: 1px solid gray; */
-  /* height: 550px; */
   width: 80%;
   margin: auto;
   padding-top: 9%;
@@ -413,7 +380,7 @@ body {
   position: relative;
   margin-top: 139px;
 }
-div > .booking-head {
+.booking-head {
   color: white;
   font-family: "Playfair Display", serif;
   font-weight: 600;
@@ -447,7 +414,7 @@ div > .booking-head {
   top: 30%;
   left: 12%;
 }
-.input-tage {
+.input-tag {
   padding: 10px;
   border: none;
   border-radius: 8px;
@@ -475,6 +442,13 @@ div > .booking-head {
 @media (max-width: 760px) {
   .icon-container {
     flex-direction: column;
+  }
+  .second-background-img {
+    background-image: none;
+  }
+  .item {
+    max-width: 100%;
+    height: auto;
   }
   .head-tags {
     font-size: 18px;
@@ -524,16 +498,58 @@ div > .booking-head {
   .text-container {
     flex-direction: column;
   }
+  .menubar {
+    display: none;
+  }
+  .background-img {
+    background-position: center;
+  }
+  #menuicon {
+    display: block;
+  }
   .food-fun-content {
     flex-direction: column;
   }
 }
+.contact {
+  color: #ffb606;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
 .footer-border {
-  border: 1px solid;
-  /* background-color: #131230; */
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  background-color: #131230;
+  position: relative;
+  height: 500px;
 }
 .footer-main-content {
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  position: absolute;
+  left: 20%;
+  right: 20%;
+}
+.parastyle {
+  color: grey;
+  font-size: 15px;
+}
+.contant-details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .footer-main-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 760px) {
+  .input-tag {
+    width: 90%;
+  }
 }
