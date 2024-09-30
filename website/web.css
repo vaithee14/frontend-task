@@ -515,20 +515,20 @@ body {
   color: #ffb606;
   font-weight: 600;
   font-family: "Playfair Display", serif;
+  font-size: 20px;
 }
 .footer-border {
   width: 100%;
   background-color: #131230;
-  position: relative;
-  height: 500px;
+  padding: 130px 0;
 }
 .footer-main-content {
+  /* border: 1px solid; */
+  width: 75%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 50px;
-  position: absolute;
-  left: 20%;
-  right: 20%;
+  column-gap: 5%;
 }
 .parastyle {
   color: grey;
@@ -537,14 +537,12 @@ body {
 .contant-details {
   display: flex;
   gap: 10px;
-  align-items: center;
 }
 @media (max-width: 760px) {
   .footer-main-content {
     display: flex;
     flex-direction: column;
     row-gap: 70px;
-    text-align: center;
     align-items: center;
   }
 }
@@ -552,4 +550,32 @@ body {
   .input-tag {
     width: 90%;
   }
+  .last-container {
+    flex-direction: column;
+  }
+  .icons-container {
+    justify-content: space-evenly;
+  }
+  .last-container2{
+    font-size: 12px;
+  }
+}
+.blue-border {
+  width: 100%;
+  border: 1px solid;
+  background-color: #0d0d27;
+  padding: 18px;
+}
+.last-container {
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+}
+.last-container2 {
+  display: flex;
+  gap: 10px;
+}
+.icons-container {
+  display: flex;
+  gap: 12px;
 }
