@@ -48,8 +48,7 @@ body {
   text-align: center;
 }
 .main-heading {
-  font-size: 59px;
-  font-style: italic;
+  font-size: 70px;
   font-family: "Playfair Display", serif;
   font-weight: 600;
 }
@@ -185,6 +184,7 @@ body {
   color: white;
   font-family: "Playfair Display", serif;
   font-size: 42px;
+  font-weight: 600;
 }
 .testy-food-para {
   color: white;
@@ -197,12 +197,12 @@ body {
   background-color: #ffb606;
   border-color: #ffb606;
   padding: 14px;
+  font-size: 13px;
   text-transform: uppercase;
-  font-weight: 600;
 }
 .reservation-btn:hover {
   background-color: transparent;
-  color: white;
+  color: #ffb606;
   cursor: pointer;
 }
 .special-deshes-head {
@@ -277,8 +277,7 @@ body {
 }
 .fa-long-arrow-right:hover {
   color: #ffb606;
-  cursor: pointer;
-  margin-right: 4px;
+  margin-left: 10px;
 }
 @media (max-width: 440px) {
   .green-garlic-para {
@@ -590,4 +589,8 @@ body {
 }
 .opations {
   border: none;
+}
+.booking-button:hover {
+  color: #ffb606;
+  background-color: transparent;
 }
