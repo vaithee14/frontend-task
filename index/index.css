@@ -67,9 +67,6 @@ body {
   align-items: center;
   padding-top: 102px;
 }
-.image.container {
-  flex: 1;
-}
 .text-container {
   padding-left: 20px;
 }
@@ -223,11 +220,8 @@ body {
   font-style: italic;
   font-size: 13px;
 }
-
 .line {
-  /* margin-left: 0; */
   width: 48%;
-  /* height: 0; */
 }
 .green-garlic-para {
   color: #555;
@@ -243,15 +237,18 @@ body {
   color: #131230;
 }
 .garlic-head {
-  font-size: 39px;
+  font-size: 36px;
   font-family: "Playfair Display", serif;
+  color: #131230;
+  font-weight: 600;
 }
 .line-para {
   font-size: 36px;
   display: flex;
   align-items: center;
   position: relative;
-  left: -18px;
+  left: -38px;
+  top: -17px;
 }
 .border4 {
   border: 1px solid;
@@ -282,12 +279,6 @@ body {
   margin-left: 10px;
 }
 @media (max-width: 440px) {
-  .green-garlic-para {
-    font-size: 10px;
-  }
-  .garlic-head {
-    font-size: 25px;
-  }
   .number {
     font-size: 20px;
   }
@@ -479,7 +470,6 @@ body {
   }
   .container-food {
     flex-direction: column;
-    padding: 12px;
   }
   .foods-pic {
     max-width: 100%;
@@ -494,7 +484,8 @@ body {
     font-size: 30px;
   }
   .testy-food-para {
-    font-size: 20px;
+    font-size: 17px;
+    margin-left: 12px;
   }
   .image-container {
     max-width: 100%;
@@ -520,6 +511,17 @@ body {
   .food-fun-content {
     flex-direction: column;
   }
+  .food-update-para {
+    text-align: center;
+    padding: 10px;
+  }
+  .special-deshes-para {
+    text-align: center;
+    padding: 10px;
+  }
+  .main{
+    padding-top: 24%;
+  }
 }
 .contact {
   color: #ffb606;
@@ -533,7 +535,6 @@ body {
   padding: 130px 0;
 }
 .footer-main-content {
-  /* border: 1px solid; */
   width: 75%;
   margin: auto;
   display: grid;
