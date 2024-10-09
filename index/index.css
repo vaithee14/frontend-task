@@ -3,7 +3,7 @@
   height: 659px;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 17px;
+  padding-top: 24px;
   position: relative;
 }
 body {
@@ -21,7 +21,7 @@ body {
   text-transform: uppercase;
 }
 .nav-border {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 90%;
   margin: auto;
   height: 93px;
@@ -52,9 +52,9 @@ body {
   font-family: "Playfair Display", serif;
   font-weight: 600;
 }
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .main-heading {
-    font-size: 40px;
+    font-size: 42px;
   }
 }
 .subheading {
@@ -482,10 +482,12 @@ body {
   }
   .testy-food-head {
     font-size: 30px;
+    padding: 7px;
   }
   .testy-food-para {
     font-size: 17px;
     margin-left: 12px;
+    padding: 9px;
   }
   .image-container {
     max-width: 100%;
@@ -513,14 +515,17 @@ body {
   }
   .food-update-para {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
   }
   .special-deshes-para {
     text-align: center;
     padding: 10px;
   }
-  .main{
+  .main {
     padding-top: 24%;
+  }
+  .booking-para{
+    padding: 15px;
   }
 }
 .contact {
@@ -568,6 +573,12 @@ body {
   }
   .last-container2 {
     font-size: 12px;
+  }
+  .contact {
+    font-size: 23px;
+  }
+  .parastyle{
+    font-size: 15px;
   }
 }
 .blue-border {
