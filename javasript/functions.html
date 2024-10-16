@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>functions</title>
+    </head>
+
+    <body>
+        <script>
+            // /////////Addition//////
+            function CalculeAddition(x, y) {
+                var z;
+                z = x + y
+                console.log(z, "value of z");
+            }
+            CalculeAddition(11, 12);
+
+            // //// brake
+            for (let i = 1; i <= 10; i++) {
+                if (i === 3) {
+                    break;
+                }
+                console.log(i,"brake");
+            }
+            ////////countinue//////////
+            for (let x = 1; x <= 10; x++) {
+                if (x === 3) {
+                    continue;
+                }
+                console.log(x ,"countinue");
+            }
+            1.  /////odd even////
+            function checkOddEven(num) {
+                if (num % 2 === 0) {
+                    console.log("Even");
+                } else {
+                    console.log("Odd");
+                }
+            }
+            checkOddEven(7);
+
+            2. // ////// Vote/////
+            function votes(Age) {
+                if (Age >= 18) {
+                    console.log("eligible to vote")
+                } else {
+                    console.log("not eligible to vote")
+                }
+            }
+            votes(16);
+
+            3. ///////Graders//////
+            function graders(marks) {
+                if (marks >= 91) {
+                    console.log("Grade AA");
+                } else if (marks >= 81) {
+                    console.log("Grade AB");
+                } else if (marks >= 71) {
+                    console.log("Grade BB");
+                } else if (marks >= 61) {
+                    console.log("Grade BC");
+                } else if (marks >= 51) {
+                    console.log("Grade CD")
+                } else if (marks >= 41) {
+                    console.log("Grade DD")
+                } else {
+                    console.log("Fail");
+                }
+            }
+            graders(45);
+
+            4. ///// Maximum and Minimum
+            function maxmin(a, b, c) {
+                if (a <= b && a <= c) {
+                    console.log("maximum: A");
+                } else if (b <= a && b <= c) {
+                    console.log("maximum: B");
+                } else {
+                    console.log("maximum: C");
+                }
+            }
+            maxmin(10, 5, 30);
+        </script>
+    </body>
+
+</html>

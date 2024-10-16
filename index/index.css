@@ -237,7 +237,7 @@ body {
   color: #131230;
 }
 .garlic-head {
-  font-size: 36px;
+  font-size: 46px;
   font-family: "Playfair Display", serif;
   color: #131230;
   font-weight: 600;
@@ -257,7 +257,7 @@ body {
 }
 
 .container-food {
-  width: 60%;
+  width: 67%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -272,7 +272,7 @@ body {
   color: #131230;
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 57px;
 }
 .fa-long-arrow-right:hover {
   color: #ffb606;
@@ -473,7 +473,7 @@ body {
   }
   .foods-pic {
     max-width: 100%;
-    height: 100%;
+    height: auto;
     margin-top: 30px;
   }
   .reservation-btn {
@@ -524,8 +524,12 @@ body {
   .main {
     padding-top: 24%;
   }
-  .booking-para{
+  .booking-para {
     padding: 15px;
+  }
+  .booking-button {
+    font-size: 11px;
+    padding: 9px;
   }
 }
 .contact {
@@ -577,7 +581,7 @@ body {
   .contact {
     font-size: 23px;
   }
-  .parastyle{
+  .parastyle {
     font-size: 15px;
   }
 }
