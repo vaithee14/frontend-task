@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spread Operators</title>
+    </head>
+
+    <body>
+        <script>
+            ///////Spread Operators////////
+            var a1 = [12, 23, 45, 67, 89]
+            var a2 = [2004, 3, 14]
+            const concatedvalue = a1.concat(a2)
+            console.log(concatedvalue, "Concat Method");
+
+            var number = [9500702156]
+            var number2 = [6789032135]
+            const spreadvalue = [...number, ...number2]
+            console.log(spreadvalue, "Spread Method");
+
+            var FirstObj = {
+                Name: "vaithee",
+                Address: "No 10, aaaa street,pondicherry-01"
+            }
+            var SecondObj = {
+                MobileNumber: 9500214355767788889,
+                Age: 20
+            }
+            const spreadmethodstr = { ...FirstObj, ...SecondObj }
+            console.log(spreadmethodstr, "Spreaded Object Method")
+
+            var str1 = "Hellow"
+            var str2 = "world"
+            const stringmethod = str1.concat(str2);
+
+            ///////////Rest Parameter////////////
+            function demo(...years) {
+                console.log(years,"Rest Parameter")
+            }
+            demo(2000, 2001, 2002, 2003, 2004);
+        </script>
+    </body>
+
+</html>

@@ -114,10 +114,7 @@
             //     console.log()
             // }
 
-
-
             //for of/////
-
             // var arrayforof = [1, 3, 688, 2356]
             // for (let demo of arrayforof) {
             //     console.log(demo, "for of");
@@ -145,13 +142,13 @@
             // number.forEach(myfunction => {
             //     console.log(myfunction)
             // })
-            //
+
             // const numbers = [65, 44, 12, 4];
             // numbers.forEach(myFunction)
             // function myFunction(item, index, arr) {
             //     arr[index] = item * 10;
             // }
-            // console.log(numbers);
+            // console.log(numbers,"foreach");
 
             //////odd even//////////
             // let numbers = [21, 34, 56, 77, 98, 45, 34, 23, 56];
@@ -170,34 +167,185 @@
             // console.log("Even numbers:", even);
             // console.log("Odd numbers:", odd);
 
-
-
             //maxmin
-            let numbers = [21, 34, 56, 77, 98, 45, 34, 23, 56];
-            let min = numbers[0];
-            let max = numbers[0];
-            function separateAndFindMinMax(arr) {
-                for (let i = 0; i < arr.length; i++) {
-                    if (arr[i] < min) {
-                        min = arr[i];
-                    }
-                    if (arr[i] > max) {
-                        max = arr[i];
-                    }
-                }
-            }
-            separateAndFindMinMax(numbers);
-            console.log("Minimum value:", min);
-            console.log("Maximum value:", max);
+            // let numbers = [21, 34, 56, 77, 98, 45, 34, 23, 56];
+            // let min = numbers[0];
+            // let max = numbers[0];
+            // function separateAndFindMinMax(numbers) {
+            //     for (let i = 0; i < numbers.length; i++) {
+            //         if (numbers[i] < min) {
+            //             min = numbers[i]
+            //         }
+            //         if (numbers[i] > max) {
+            //             max = numbers[i]
+            //         }
+            //     }
+            // }
+            // separateAndFindMinMax(numbers);
+            // console.log("Minimum value:", min);
+            // console.log("Maximum value:", max);
 
 
             //////Map
-            var amount = [2500, 2004, 13, 2006];
-            const filteredData = amount.filter(price => price < 2500);
-            console.log(filteredData); 
+            // var amount = [2500, 2004, 13, 2006];
+            // const filteredData = amount.filter(price => price < 2500);
+            // console.log(filteredData);
 
-            const mappedData = amount.map(price => price + 2); 
-            console.log(mappedData); 
+            // const mappedData = amount.map(price => price + 2);
+            // console.log(mappedData);
+
+            // const user = [
+            //     { amount: 5000, date: "27-09-2024" },
+            //     { amount: 7500, date: "30-9-2024" }
+            // ]
+            // //////////////////Reduce///////////////
+            // const totalAmount = user.reduce((acc, cur) => acc + cur.amount, 0);
+            // console.log(totalAmount, "REDUCE");
+            // ////////////////map and reduce method/////////
+            // const amounts = user.map(userEntry => userEntry.amount);
+            // const total = amounts.reduce((acc, cur) => acc + cur, 0);
+            // console.log(total, "MAP AND REDUCE");
+
+            // //////////sum of all element/////
+            // const sumofAllElements = [5, 10, 15, 20];
+            // let sum = 0;
+            // for (let i = 0; i < sumofAllElements.length; i++) {
+            //     sum = +sumofAllElements[i];
+            // }
+            // console.log(sum, "sum of all element");
+
+            /////////Date Method///////
+            const today = new Date()
+            console.log(today, "Today Date,Time,Hours,Day");
+            ////////////Month/////////
+            const month = today.getMonth();
+            console.log(month, "Month");
+            //////////date//////////
+            const date = today.getDate()
+            console.log(date, "Date");
+            ///////////////full year///////////
+            const year = today.getFullYear()
+            console.log(year, "Year");
+            /////////////Day///////////
+            const day = today.getDay()
+            console.log(day, "Day");
+
+            /////////////Time///////////
+            const time = today.getTime()
+            console.log(time, "time");
+
+            /////////////Hours///////////
+            const hours = today.getHours()
+            console.log(hours, "Hours");
+
+            /////////////Seconds///////////
+            const sec = today.getSeconds()
+            console.log(sec, "seconds");
+
+            /////////////Milli second///////////
+            const milsec = today.getMilliseconds()
+            console.log(milsec, "milliseconds");
+
+            /////////////UTC Date///////////
+            const UtcDate = today.getUTCDate()
+            console.log(UtcDate, "UTC Date");
+
+            /////////////UTC Year///////////
+            const Utcyear = today.getUTCFullYear()
+            console.log(Utcyear, "UTC Date");
+
+            /////////////UTC Hours///////////
+            const UtcHours = today.getUTCHours()
+            console.log(UtcHours, "UTC Hours");
+
+            /////////////UTC milli sec///////////
+            const Utcmillsec = today.getUTCMilliseconds()
+            console.log(Utcmillsec, "UTC milli second");
+
+            /////////////month////////////
+            const UtcMonth = today.getUTCFullYear()
+            console.log(UtcMonth, "Utc month");
+
+            /////////////minutes////////////
+            const UtcMin = today.getUTCMinutes()
+            console.log(UtcMin, "Utc minutes");
+
+            ///////////// UTCSeconds///////////
+            const UtcSec = today.getUTCSeconds()
+            console.log(UtcSec, "UTC seconds");
+
+            const UtcDay = today.getDay()
+            console.log(UtcDay, "UTC Day");
+
+            ///////////Set day//////////
+            /////////////Full Year///////////
+            today.setFullYear(2004);
+            console.log(today.getFullYear(), "set year");
+
+            /////////////Set Month///////////
+            today.setMonth(2);
+            console.log(today.getMonth(), "March");
+
+            /////////////Set date///////////
+            today.setDate(5);
+            console.log(today.getDate(), "set date");
+
+            //////////set hours//////////
+            today.setHours(20);
+            console.log(today);
+
+            //////////set Mins//////////
+            today.setMinutes(45);
+            console.log(today.getMinutes(), "mins");
+
+            //////////set Milli sec//////////
+            today.setMilliseconds(456);
+            console.log(today.getMilliseconds(), "millisec");
+
+            //////////set seconds//////////
+            today.setMilliseconds(42);
+            console.log(today.getSeconds(), "Seconds");
+
+            //////////Set UTC //////////
+            const days = new Date();
+            console.log(days);
+
+            //////////Set UTC FullYear//////////
+            days.setUTCFullYear(2004);
+            console.log(days.getFullYear(), "UTC Full Year");
+
+            //////////Set UTC Month//////////
+            days.setUTCMonth(5);
+            console.log(days.getMonth(), "UTC Month");
+
+            //////////Set UTC Date//////////
+            days.setUTCDate(3);
+            console.log(days.getDate(), "UTC Date");
+
+            //////////Set UTC Hours//////////
+            days.setUTCHours(20)
+            console.log(days.getHours(), "UTC Hours");
+
+            //////////Set UTC Minutes//////////
+            days.setUTCMinutes(25)
+            console.log(days.getHours(), "UTC Minutes");
+
+            //////////Set UTC Seconds//////////
+            days.setUTCSeconds(39);
+            console.log(days.getUTCSeconds(), "UTC Seconds");
+
+            //////////Set UTC Milli Seconds//////////
+            days.setUTCMilliseconds(456);
+            console.log(days.getMilliseconds(), "UTC Milli Seconds");
+
+            var number = 12.8
+            // console.log(Math.round(number),"Math");
+            // console.log(Math.ceil(number),"Ceil");
+            // console.log(Math.floor(number),"Floor");
+            // console.log(Math.sqrt(number),"Sqrt")
+            var abs = -7
+            console.log(Math.abs(abs), "Abs");
+            
 
         </script>
     </body>

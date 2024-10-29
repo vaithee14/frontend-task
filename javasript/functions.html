@@ -101,6 +101,30 @@
             }
             TwoProducts(3, 4);
 
+            8.////////// Circumference ///////////
+            function circleCircumferenceAndArea(radius) {
+                let circumference = 2 * Math.PI * radius;
+                let area = Math.PI * radius * radius;
+                console.log("Circumference of the circle: " + circumference);
+                console.log("Area of the circle: " + area);
+            }
+            circleCircumferenceAndArea(9);
+
+            9.////////// Prime Numbers /////////
+
+            function greet(number) {
+                if (number <= 1) {
+                    console.log(number, "Not Prime Number");
+                    return;
+                }
+                for (let i = 2; i <= Math.sqrt(number); i++) {
+                    console.log(number, "not prime number");
+                    return;
+                }
+                console.log(number, "is a prime number")
+            }
+            greet(4)
+
             1.////////function expression anonymous////////
             // var Stored = function (name) {
             //     console.log(name);
@@ -133,6 +157,18 @@
             //     i++;
             // }
             // while (i <= 25);
+
+            ///////Pattren//////
+            let rows = 7;
+            let pattern = "";
+            for (let n = 1; n <= rows; n++) {
+                for (let num = 1; num <= n; num++) {
+                    pattern += num;
+                }
+                pattern += "\n";
+            }
+            console.log(pattern);
+
         </script>
     </body>
 

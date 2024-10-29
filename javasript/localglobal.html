@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            //////// Local Scope //////////
+            function greet() {
+                var a = 10;
+                console.log(a, "Local Scope")
+            }
+            greet();
+
+            //////// Global Scope //////////
+            var b = 20;
+            function globScope2() {
+                console.log(b, "Global Scope")
+            }
+            globScope2();
+
+            ///////// block Level//////////
+            function block() {
+                let message = "Local"
+                if (true) {
+                    let message = "Block-Level"
+                    console.log(message);
+                }
+                console.log(message);
+            }
+            block();
+
+            ///////// Set Time Out//////////
+            let timeoutID = setTimeout(() => {
+                console.log("Set Timeout is Working");
+            }, 2000);
+            clearTimeout(timeoutID);
+
+            ///////// Set Interval //////////
+            let interval = setInterval(() => {
+                console.log("set interval");
+            }, 2000);
+            clearInterval(interval);
+
+            
+        </script>
+    </body>
+
+</html>
