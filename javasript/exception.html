@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>exception handling</title>
+    </head>
+
+    <body>
+        <script>
+            ////////Exception Handling///////
+            function checkOddEven(num) {
+                try {
+                    num = Number(num);
+                    if (num !== num) {
+                        throw new Error("Invalid input. Please provide a valid number.");
+                    }
+                    if (num % 2 === 0) {
+                        console.log(num, "is an even number");
+                    } else {
+                        console.log(num, "is an odd number");
+                    }
+                } catch (error) {
+                    console.log(error.message);
+                }
+            }
+            checkOddEven(3);
+            checkOddEven();
+
+            // function compareNumbers(a, b) {
+            //     try {
+            //         a = Number(a);
+            //         b = Number(b);
+            //         if (isNaN(a) || isNaN(b)) throw "not a valid number";
+            //         if (a > b) {
+            //             console.log(a + " is the largest.");
+            //         } else if (b > a) {
+            //             console.log(b + " is the largest.");
+            //         } else {
+            //             console.log("Both numbers are equal.");
+            //         }
+            //     } catch (error) {
+            //         console.log("Error: Input is " + error);
+            //     } finally {
+            //         console.log("Number comparison completed.");
+            //     }
+            // }
+            // let num1 = prompt("Enter the first number:");
+            // let num2 = prompt("Enter the second number:");
+            // compareNumbers(num1, num2);
+        </script>
+    </body>
+
+</html>

@@ -10,43 +10,83 @@
     <body>
         <script>
             //////// Local Scope //////////
-            function greet() {
-                var a = 10;
-                console.log(a, "Local Scope")
-            }
-            greet();
+            // function greet() {
+            //     var a = 10;
+            //     console.log(a, "Local Scope")
+            // }
+            // greet();
 
             //////// Global Scope //////////
-            var b = 20;
-            function globScope2() {
-                console.log(b, "Global Scope")
-            }
-            globScope2();
+            // var b = 20;
+            // function globScope2() {
+            //     console.log(b, "Global Scope")
+            // }
+            // globScope2();
 
             ///////// block Level//////////
-            function block() {
-                let message = "Local"
-                if (true) {
-                    let message = "Block-Level"
-                    console.log(message);
-                }
-                console.log(message);
-            }
-            block();
+            // function block() {
+            //     let message = "outer"
+            //     if (true) {
+            //         let message = "inner"
+            //         console.log(message);
+            //     }
+            //     console.log(message);
+            // }
+            // block();
 
             ///////// Set Time Out//////////
-            let timeoutID = setTimeout(() => {
-                console.log("Set Timeout is Working");
-            }, 2000);
-            clearTimeout(timeoutID);
+            // setTimeout(() => {
+            //     console.log("Set Timeout is Working");
+            // }, 2000);
+
+            ///////// Clear time out //////////
+            // let clrtimeout = setTimeout(() => {
+            //     console.log("Clear TimeOut");
+            // }, 3000);
+            // clearTimeout(clrtimeout);
+
+            ///////// Clear Interval //////////
+            // let clrinterval = setInterval(() => {
+            //     console.log("Clear Interval");
+            // }, 2000);
+            // clearInterval(clrinterval);
 
             ///////// Set Interval //////////
-            let interval = setInterval(() => {
-                console.log("set interval");
-            }, 2000);
-            clearInterval(interval);
+            // let setinter = setInterval(() => {
+            //     console.log("set interval");
+            // }, 2000);
+            // clearInterval(setinter);
 
-            
+            //////Exception Handing///////
+            // const numerator = 100, denominator = 'a';
+            // try {
+            //     console.log(numerator / denominator);
+            //     console.log(a);
+            // }
+            // catch (error) {
+            //     console.log('An error caught');
+            //     console.log('Error message: ' + error);
+            // }
+            // finally {
+            //     console.log('Finally will execute every time');
+            // }
+
+
+            try {
+                let a = 10, b = 20
+                if (a != b) {
+                    throw ("a is not equal to b")
+                } else {
+                    console.log(a + b);
+                }
+            }
+            catch (error) {
+                // console.log(error);
+                // alert(error)
+            }
+            finally {
+                console.log("finally is working");
+            }
         </script>
     </body>
 

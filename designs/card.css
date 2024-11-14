@@ -16,22 +16,12 @@
   background-color: black;
   color: white;
   border: none;
-  /* border-radius: 20px;
-  width: 170px;
-  padding: 10px;
-   */
   border-radius: 12px;
   width: 255px;
   padding: 16px;
 }
 .card2 {
-  /* border: 1px solid black;
-  height: 400px;
-  width: 262px;
-  padding: 10px;
-  text-align: center; */
   background-color: rgb(216, 31, 62);
-  /*  */
 }
 .boxpara {
   text-align: center;
@@ -66,9 +56,13 @@
   border-radius: 26px;
   width: 261px;
 }
+.main-container1 {
+  display: flex;
+  gap: 54px;
+}
 * {
   font-family: "Poppins", sans-serif;
 }
-.fa fa-instagram {
+.fa {
   color: whit;
 }

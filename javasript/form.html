@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation</title>
+        <style>
+            .redcolor {
+                color: red;
+            }
+
+            .greencolor {
+                color: green;
+            }
+
+            .main-container {
+                background-color: pink;
+                padding: 48px;
+                width: 40%;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .submit {
+                background-color: red;
+                color: whitesmoke;
+                border: none;
+                padding: 12px;
+                border-radius: 18%;
+            }
+
+            .resetbtn {
+                color: red;
+                background-color: whitesmoke;
+                border: none;
+                padding: 12px;
+                border-radius: 18%;
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <section class="main-container">
+            <form>
+                <label>FIRST NAME :</label>
+                <input type="text" id="fname-input" pattern="^[A-za-z]{4,}$" required>
+                <span id="fname-error" class="redcolor"></span>
+                <span id="fname-success" class="greencolor"></span><br><br>
+
+                <label>SECOND NAME :</label>
+                <input type="text" id="sname-input" pattern="^[A-za-z]{4,}$" required>
+                <span id="sname-error" class="redcolor"></span>
+                <span id="sname-success" class="greencolor"></span><br><br>
+
+                <label>EMAIL ID:</label>
+                <input type="email" id="email-input" pattern="[A-Za-z0-9]+@[a-z]+\.+[a-z]{2,}">
+                <span id="email-error" class="redcolor"></span>
+                <span id="email-success" class="greencolor"></span><br><br>
+
+                <label>DATE OF BIRTH:</label>
+                <input type="date" id="dob-input" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}$" required>
+                <span id="dob-error" class="redcolor"></span>
+                <span id="dob-success" class="greencolor"></span><br><br>
+
+                <label>MOBILE NUMBER: </label>
+                <input type="text" id="mobile-input" pattern="^\d[6,7,8,9][0-9]{9}$">
+                <span id="mobile-error" class="redcolor"></span>
+                <span id="mobile-success" class="greencolor"></span><br><br>
+
+                <label>ADDRESS: </label>
+                <input type="text" id="address-input">
+                <span id="address-error" class="redcolor"></span>
+                <span id="address-success" class="greencolor"></span><br><br>
+
+                <label>CITY: </label>
+                <input type="text" id="city-input" pattern="^[A-Za-z\s-]+$"
+                    title="City names can only contain letters, spaces, and hyphens.">
+                <span id="city-error" class="redcolor"></span>
+                <span id="city-success" class="greencolor"></span><br><br>
+
+                <label>STATE: </label>
+                <input type="text" id="state-input">
+                <span id="state-error" class="redcolor"></span>
+                <span id="state-success" class="greencolor"></span><br><br>
+
+                <label>PINCODE: </label>
+                <input type="text" id="pincode-input" pattern="^\d{6}$">
+                <span id="pincode-error" class="redcolor"></span>
+                <span id="pincode-success" class="greencolor"></span><br><br>
+
+                <label>COUNTRY:</label>
+                <input type="text" readonly value="India"><br><br>
+
+                <label>HOBBIES:</label>
+                Drawing <input type="checkbox" id="drawing">
+                Singing <input type="checkbox" id="singing">
+                Dancing <input type="checkbox" id="dancing">
+                Sketching <input type="checkbox" id="sketching">
+                Others <input type="checkbox" id="others" onclick="toggleOtherHobby()">
+                <input type="text" id="other-hobby" style="display:none;" placeholder="Specify your hobby">
+                <span id="hobbies-error" class="redcolor"></span>
+                <span id="hobbies-success" class="greencolor"></span>
+                <br><br>
+
+                <label>COURSE APPLIED FOR: </label>
+                BCA<input type="checkbox" id="bca">
+                BCOM<input type="checkbox" id="bcom">
+                BA<input type="checkbox" id="ba">
+                BSC<input type="checkbox" id="bsc">
+                <span id="course-error" class="redcolor"></span>
+                <span id="course-success" class="greencolor"></span><br><br>
+
+                <button type="button" onclick="Validation()" class="submit">Submit</button>
+                <button type="reset" class="resetbtn">Reset</button>
+            </form>
+            <script>
+                // Validation function
+                function Validation() {
+                    var firstnameData = document.getElementById('fname-input').value;
+                    var secondnameData = document.getElementById('sname-input').value;
+                    var DobData = document.getElementById('dob-input').value;
+                    var emailData = document.getElementById('email-input').value;
+                    var mobileData = document.getElementById('mobile-input').value;
+                    var addressData = document.getElementById('address-input').value;
+                    var cityData = document.getElementById('city-input').value;
+                    var stateData = document.getElementById('state-input').value;
+                    var pincodeData = document.getElementById('pincode-input').value;
+
+
+                    // First Name Validation
+                    var firstnameregex = /^[A-Za-z]{4,}$/
+                    if (firstnameData === "") {
+                        document.getElementById('fname-error').innerHTML = "Enter a valid name*";
+                    }
+                    else if (!firstnameregex.test(firstnameData)) {
+                        document.getElementById('fname-error').innerHTML = "At least 4 characters, only letters allowed.";
+                        document.getElementById('fname-success').innerHTML = "";
+                    }
+                    else {
+                        document.getElementById('fname-error').innerHTML = "";
+                        document.getElementById('fname-success').innerHTML = "Entered correct name!";
+                    }
+                    // console.log(firstnameData, "First Name");
+
+                    // Second Name Validation
+                    var Secondnameregex = /^[A-Za-z]{4,}$/
+                    if (secondnameData === "") {
+                        document.getElementById('sname-error').innerHTML = "Enter Valid Name*";
+                    } else if (!Secondnameregex.test(secondnameData)) {
+                        document.getElementById('sname-error').innerHTML = "At least 4 characters, only letters allowed.";
+                    }
+                    else {
+                        document.getElementById('sname-error').innerHTML = "";
+                        document.getElementById('sname-success').innerHTML = "Entered Correct Name";
+                    }
+                    // console.log(secondnameData, "Second Name")
+
+                    // date of birth
+                    var dobRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+                    if (DobData === "") {
+                        document.getElementById('dob-error').innerHTML = "Please select a correct date of birth*";
+                    } else if (!dobRegex.test(DobData)) {
+                        document.getElementById('dob-error').innerHTML = "Please enter a valid date (DD/MM/YYYY).";
+                    } else {
+                        document.getElementById('dob-error').innerHTML = "";
+                        document.getElementById('dob-success').innerHTML = "Entered Correct";
+                    }
+
+                    // Email Validation
+                    var EmailRegex = /^[A-Za-z0-9]+@[a-z]+\.+[a-z]{2,}$/
+                    if (emailData === "") {
+                        document.getElementById('email-error').innerHTML = "Enter Valid Email ID*";
+                    } else if (!EmailRegex.test(emailData)) {
+                        document.getElementById('email-error').innerHTML = "Invaild Email Format"
+                        document.getElementById('email-success').innerHTML = ""
+                    }
+                    else {
+                        document.getElementById('email-error').innerHTML = "";
+                        document.getElementById('email-success').innerHTML = "Entered Correct Email";
+                    }
+
+                    // Mobile Number Validation
+                    var mobileRegex = /^\d{10}$/;
+                    if (mobileData === "") {
+                        document.getElementById('mobile-error').innerHTML = "Please enter a valid 10-digit number*";
+                    } else if (!mobileRegex.test(mobileData)) {
+                        document.getElementById('mobile-error').innerHTML = "Please enter a valid 10-digit number*";
+                    } else {
+                        document.getElementById('mobile-error').innerHTML = "";
+                        document.getElementById('mobile-success').innerHTML = "Entered Correct Number";
+                    }
+
+
+                    // Address Validation
+                    if (addressData === "") {
+                        document.getElementById('address-error').innerHTML = "Enter Valid Address*";
+                    } else {
+                        document.getElementById('address-error').innerHTML = "";
+                        document.getElementById('address-success').innerHTML = "Entered Correct Address";
+                    }
+
+                    // City Validation
+                    var cityRegex = /^[A-Za-z\s-]+$/;
+                    if (cityData === "") {
+                        document.getElementById('city-error').innerHTML = "Please select a correct city*";
+                    } else if (!cityRegex.test(cityData)) {
+                        document.getElementById('city-error').innerHTML = "Please select a correct city*";
+                        document.getElementById('city-success').innerHTML = "";
+                    } else {
+                        document.getElementById('city-error').innerHTML = "";
+                        document.getElementById('city-success').innerHTML = "Entered Correct City";
+                    }
+
+                    // State Validation
+                    if (stateData === "") {
+                        document.getElementById('state-error').innerHTML = "Enter Valid State*";
+                    } else {
+                        document.getElementById('state-error').innerHTML = "";
+                        document.getElementById('state-success').innerHTML = "Entered Correct State";
+                    }
+                    // Pincode Validation
+                    var pincoderegex = /^\d{6}$/;
+                    if (pincodeData === "") {
+                        document.getElementById('pincode-error').innerHTML = "Enter Valid 6-Digit Pincode*";
+                    } else if (!pincoderegex.test(pincodeData)) {
+                        document.getElementById('pincode-error').innerHTML = "Enter Valid 6-Digit Number*";
+                        document.getElementById('pincode-error').innerHTML = ""
+                    } else {
+                        document.getElementById('pincode-error').innerHTML = "";
+                        document.getElementById('pincode-success').innerHTML = "Entered Correct Pincode";
+                    }
+
+                    var courseError = document.getElementById('course-error');
+                    var courseSuccess = document.getElementById('course-success');
+
+                    // Course Applied
+                    if (!bca.checked && !bcom.checked && !ba.checked && !bsc.checked) {
+                        courseError.innerHTML = "Please select at least one course*";
+                        courseSuccess.innerHTML = "";
+                    } else {
+                        courseError.innerHTML = "";
+                        courseSuccess.innerHTML = "Course selection is valid";
+                    }
+                    
+                    // Hobbies selected
+                    var hobbiesError = document.getElementById('hobbies-error');
+                    var hobbiesSuccess = document.getElementById('hobbies-success');
+                    if (!drawing.checked && !singing.checked && !dancing.checked && !sketching.checked && !others.checked) {
+                        hobbiesError.innerHTML = "Please select at least one hobby*";
+                        hobbiesSuccess.innerHTML = "";
+                    } else {
+                        if (others.checked && otherHobby.value.trim() === "") {
+                            hobbiesError.innerHTML = "Please specify your other hobby*";
+                            hobbiesSuccess.innerHTML = "";
+                        } else {
+                            hobbiesError.innerHTML = "";
+                            hobbiesSuccess.innerHTML = "Hobby selection is valid";
+                        }
+                    }
+                }
+            </script>
+        </section>
+    </body>
+
+</html>

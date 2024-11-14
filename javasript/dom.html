@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document Object Model</title>
+    </head>
+
+    <body>
+        <!-- <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, molestiae!</p>
+        <h2 class="heading-cls">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, velit.</h2>
+        <p>Tag Name</p> -->
+
+        <p id="content" onclick="contentbtn()">Old content</p>
+
+        <img id="image" src="../images/building.jpg" height="200px" width="200px">
+        <button type="button" onclick="changedimage()">Change Image</button>
+
+        <script>
+            // const elementData = document.getElementById("para")
+            // elementData.innerHTML = "Hello"
+            // console.log(elementData);
+
+            // const classData = document.getElementsByClassName("heading-cls")
+            // console.log(classData);
+
+            // const tagData =document.getElementsByTagName("p")
+            // console.log(tagData);
+
+            //click function
+            function changedimage() {
+                document.getElementById("image").src = "../images/carimage.jpg";
+            }
+
+            function contentbtn() {
+                const changeData = document.getElementById("content");
+                changeData.innerHTML = "New content";
+                console.log(changeData); 
+            }
+
+        </script>
+    </body>
+
+</html>
