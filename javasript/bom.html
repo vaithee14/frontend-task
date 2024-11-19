@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bom</title>
+    </head>
+
+    <body>
+        <p id="demo"></p>
+        <input type="button" value="Back" onclick="goBack()">
+        <button onclick="myFunction()">Try it</button>
+        <button onclick="confirmbox()">Confirm Box</button>
+        <button onclick="myFunction()">Try it</button>
+        <button onclick="alert('Hello\nHow are you?')">line brake</button>
+        <button onclick="setTimeout(myFunction, 3000);">Setimeout</button>
+        <button onclick="clearTimeout(myVar)">Stop it</button>
+
+        <script>
+
+            //inner width
+            // var w = window.innerWidth
+            // console.log(w);
+            //inner height
+            // var height = window.innerHeight
+            // console.log(height);
+            //window open
+            // var openwin =window.open()
+            // console.log(openwin);
+
+            var screensize = window.screen
+            console.log(screensize);
+
+            // JavaScript Window Location
+            var l = window.location.href
+            console.log(l);
+
+            var hOst = window.location.hostname
+            console.log(hOst);
+
+            var pathdata = window.location.pathname
+            console.log(pathdata);
+
+            var proto = window.location.protocol
+            console.log(proto);
+
+            //JavaScript Window History
+            function goBack() {
+                window.history.back();
+            }
+
+            function myFunction() {
+                alert("I am an alert box!");
+            }
+
+            function confirmbox() {
+                var txt;
+                if (confirm("Press a button!")) {
+                    txt = "You pressed OK!";
+                } else {
+                    txt = "You pressed Cancel!";
+                }
+            }
+
+            function myFunction() {
+                let text;
+                let person = prompt("Please enter your name:", "Harry Potter");
+                if (person == null || person == "") {
+                    text = "User cancelled the prompt.";
+                } else {
+                    text = "Hello " + person + "! How are you today?";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+
+            function myFunction() {
+                alert('Hello');
+            }
+
+            let myVar = setInterval(myTimer, 1000);
+            function myTimer() {
+                const d = new Date();
+                document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+
+        </script>
+    </body>
+
+</html>

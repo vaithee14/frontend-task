@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>promise</title>
+    </head>
+
+    <body>
+        <script>
+            let isActive = true;
+
+            var myData = new Promise(function (res, rej) {
+                if (isActive) {
+                    res("The promise was resolved because isActive is true.");
+                } else {
+                    rej("The promise was rejected because isActive is false.");
+                }
+            });
+            myData
+                .then((msg) => {
+                    console.log(msg);
+                })
+                .catch((msg) => {
+                    console.log(msg);
+                })
+            console.log(myData);
+
+            let activeStatus = false
+            var demoData = new Promise(function (resolve, reject) {
+                if (activeStatus) {
+                    resolve("resolve is working");
+                } else {
+                    reject("reject is working");
+                }
+            })
+
+            demoData
+                .then((message) => {
+                    console.log(message)
+                })
+                .catch((message) => {
+                    console.log(message)
+                })
+            console.log(activeStatus);
+
+
+        </script>
+    </body>
+
+</html>

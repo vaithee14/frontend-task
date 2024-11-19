@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Details Form</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+                /* border: none; */
+                box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            button {
+                margin: 5px;
+            }
+
+            .error {
+                color: red;
+                font-size: 0.9em;
+            }
+
+            .user {
+                text-align: center;
+                /* background-color: rebeccapurple; */
+                color: black;
+                box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
+            }
+
+            .success {
+                color: green;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h2 class="user">User Details Form</h2>
+
+        <form id="userForm">
+            <label class="fname">First Name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+
+            <label class="sname">Second Name:</label>
+            <input type="text" id="sname" name="sname"><br><br>
+
+            <label class="email">Email Address:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+            <span id="errorMessage" class="error"></span>
+            <span id="successMessage" class="success"></span>
+        </form>
+
+        <h2 class="user">User Table</h2>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Second Name</th>
+                    <th>Email Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <script>
+            const userDataArray = [];
+
+            function submitForm() {
+                const fname = document.getElementById("fname").value;
+                const sname = document.getElementById("sname").value;
+                const email = document.getElementById("email").value;
+                const errorMessage = document.getElementById("errorMessage");
+                const successMessage = document.getElementById("successMessage");
+
+
+
+                errorMessage.textContent = "";
+
+                if (!fname || !sname || !email) {
+                    errorMessage.textContent = "All fields are required!";
+                    return;
+                }
+                const firstnameRegex = /^[A-Za-z]{4,}$/
+
+
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    errorMessage.textContent = "Invalid email format!";
+                    document.getElementById("successMessage").textContent = " ";
+                    return;
+                } else {
+                    document.getElementById("errorMessage").textContent = " ";
+                    document.getElementById("successMessage").textContent = "Entered correct";
+                }
+
+
+                if (userDataArray.some(user => user.email === email)) {
+                    errorMessage.textContent = "Email already exists!";
+                    return;
+                }
+
+                const userData = { fname, sname, email };
+                userDataArray.push(userData);
+
+                document.getElementById("fname").value = "";
+                document.getElementById("sname").value = "";
+                document.getElementById("email").value = "";
+
+                // alert("User added successfully!");
+
+                displayUserTable();
+            }
+
+            function displayUserTable() {
+                const tableBody = document.getElementById("userTable").getElementsByTagName("tbody")[0];
+
+                tableBody.innerHTML = "";
+
+                userDataArray.forEach((user, index) => {
+                    const row = document.createElement("tr");
+
+                    // First Name
+                    const fnameCell = document.createElement("td");
+                    fnameCell.textContent = user.fname;
+                    row.appendChild(fnameCell);
+
+                    // Second Name
+                    const snameCell = document.createElement("td");
+                    snameCell.textContent = user.sname;
+                    row.appendChild(snameCell);
+
+                    // Email
+                    const emailCell = document.createElement("td");
+                    emailCell.textContent = user.email;
+                    row.appendChild(emailCell);
+
+                    // Actions
+                    const actionsCell = document.createElement("td");
+
+                    // Edit Button
+                    const editButton = document.createElement("button");
+                    editButton.textContent = "Edit";
+                    editButton.onclick = () => editUser(index);
+                    actionsCell.appendChild(editButton);
+
+                    // Delete Button
+                    const deleteButton = document.createElement("button");
+                    deleteButton.textContent = "Delete";
+                    deleteButton.onclick = () => deleteUser(index);
+                    actionsCell.appendChild(deleteButton);
+
+                    row.appendChild(actionsCell);
+
+                    // Add the row to the table body
+                    tableBody.appendChild(row);
+                });
+            }
+
+            // Function to edit user details
+            function editUser(index) {
+                const user = userDataArray[index];
+
+                // Populate form fields with existing data
+                document.getElementById("fname").value = user.fname;
+                document.getElementById("sname").value = user.sname;
+                document.getElementById("email").value = user.email;
+
+                // Remove user from array
+                userDataArray.splice(index, 1);
+
+                alert("Edit the details and click Submit.");
+
+                // Refresh the table
+                displayUserTable();
+            }
+
+            // Function to delete a user
+            function deleteUser(index) {
+                // Remove the user from array
+                userDataArray.splice(index, 1);
+
+                alert("User deleted successfully!");
+
+                // Refresh the table
+                displayUserTable();
+            }
+
+
+        </script>
+
+    </body>
+
+</html>
