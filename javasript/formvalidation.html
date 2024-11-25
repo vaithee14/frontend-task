@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>User Details Form</title>
         <style>
+            .main-container{
+                width: 50%;
+                margin: auto;
+            }
             table {
                 width: 100%;
                 border-collapse: collapse;
@@ -15,9 +19,9 @@
             table,
             th,
             td {
-                border: 1px solid black;
+                /* border: 1px solid black; */
                 padding: 8px;
-                text-align: left;
+                /* text-align: left; */
                 box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, 0.16);
             }
 
@@ -48,49 +52,54 @@
     </head>
 
     <body>
+        <section class="main-container">
+            <h2 class="user">User Details Form</h2>
 
-        <h2 class="user">User Details Form</h2>
+            <form id="userForm">
+                <label>First Name:</label>
+                <input type="text" id="fname" name="firstname">
+                <span id="fname-error" class="redcolor"></span>
+                <span id="fname-success" class="greencolor"></span><br><br>
 
-        <form id="userForm">
-            <label>First Name:</label>
-            <input type="text" id="fname" name="firstname">
-            <span id="fname-error" class="redcolor"></span>
-            <span id="fname-success" class="greencolor"></span><br><br>
+                <label>Second Name:</label>
+                <input type="text" id="sname" name="Lastname">
+                <span id="sname-error" class="redcolor"></span>
+                <span id="sname-success" class="greencolor"></span><br><br>
 
-            <label>Second Name:</label>
-            <input type="text" id="sname" name="Lastname">
-            <span id="sname-error" class="redcolor"></span>
-            <span id="sname-success" class="greencolor"></span><br><br>
+                <label class="email">Email Address:</label>
+                <input type="email" id="email" name="email">
+                <span id="email-error" class="redcolor"></span>
+                <span id="email-success" class="greencolor"></span><br><br>
 
-            <label class="email">Email Address:</label>
-            <input type="email" id="email" name="email">
-            <span id="email-error" class="redcolor"></span>
-            <span id="email-success" class="greencolor"></span><br><br>
+                <label class="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile">
+                <span id="mobile-error" class="redcolor"></span>
+                <span id="mobile-success" class="greencolor"></span><br><br>
 
-            <label class="mobile">Mobile Number:</label>
-            <input type="number" id="mobile" name="mobile">
-            <span id="mobile-error" class="redcolor"></span>
-            <span id="mobile-success" class="greencolor"></span><br><br>
+                <label class="address">Address:</label>
+                <input type="text" id="address" name="address">
+                <span id="address-error" class="redcolor"></span>
+                <span id="address-success" class="greencolor"></span><br><br>
 
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
 
-            <button type="button" onclick="submitForm()">Submit</button>
-        </form>
-
-        <h2 class="user">User Table</h2>
-        <table id="userTable">
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Second Name</th>
-                    <th>Email Address</th>
-                    <th>Mobile Number</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-
+            <h2 class="user">User Table</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Second Name</th>
+                        <th>Email Address</th>
+                        <th>Mobile Number</th>
+                        <th>Address:</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
         <script>
             const userDataArray = [];
 
@@ -100,8 +109,8 @@
                 const secondname = document.getElementById("sname").value;
                 const emailData = document.getElementById("email").value;
                 const mobileData = document.getElementById("mobile").value;
+                const addressData = document.getElementById("address").value;
 
-                // Reset all error and success messages
                 resetMessages();
 
                 // First Name Validation
@@ -135,24 +144,39 @@
                     document.getElementById('email-error').innerHTML = "";
                     document.getElementById('email-success').innerHTML = "Entered Correct Email";
                 }
-
-                 var mobileRegex = /^\d{10}$/;
+                // Mobile Number validation
+                var mobileRegex = /^\d{10}$/;
                 if (mobileData === "") {
-                    document.getElementById('mobile-error').innerHTML = "Please enter a valid 10-digit number*";
-                } else if (!mobileRegex.test(mobileData)) {
                     document.getElementById('mobile-error').innerHTML = "Please enter a valid 10-digit number*";
                 } else {
                     document.getElementById('mobile-error').innerHTML = "";
                     document.getElementById('mobile-success').innerHTML = "Entered Correct Number";
                 }
 
+                // Address Validation
+                // Address Validation
+                if (addressData === "") {
+                    document.getElementById('address-error').innerHTML = "Enter Valid Address*";
+                } else {
+                    document.getElementById('address-error').innerHTML = "";
+                    document.getElementById('address-success').innerHTML = "Entered Correct Address";
+                }
+
+
                 // Only proceed if all fields are valid
                 if (document.getElementById('fname-error').innerHTML === "" &&
                     document.getElementById('sname-error').innerHTML === "" &&
                     document.getElementById('email-error').innerHTML === "" &&
-                    document.getElementById('mobile-error').innerHTML === "") {
+                    document.getElementById('mobile-error').innerHTML === "" &&
+                    document.getElementById('address-error').innerHTML === "") {
 
-                    const userData = { fname: firstname, sname: secondname, email: emailData, moblie: mobileData };
+                    const userData = {
+                        fname: firstname,
+                        sname: secondname,
+                        email: emailData,
+                        mobile: mobileData,
+                        address: addressData
+                    };
                     userDataArray.push(userData);
 
                     // Clear input fields
@@ -160,6 +184,7 @@
                     document.getElementById("sname").value = "";
                     document.getElementById("email").value = "";
                     document.getElementById("mobile").value = "";
+                    document.getElementById("address").value = "";
 
                     // Display updated user table
                     displayUserTable();
@@ -199,7 +224,12 @@
                     const mobileCell = document.createElement("td");
                     mobileCell.textContent = user.mobile;
                     row.appendChild(mobileCell);
-                    
+
+                    // address cell
+                    const addresscell = document.createElement('td')
+                    addresscell.textContent = user.address;
+                    row.appendChild(addresscell);
+
                     // Actions column
                     const actionsCell = document.createElement("td");
 
@@ -228,6 +258,7 @@
                 document.getElementById("sname").value = user.sname;
                 document.getElementById("email").value = user.email;
                 document.getElementById("mobile").value = user.mobile;
+                document.getElementById("address").value = user.address;
 
                 // Remove user from array and refresh table
                 userDataArray.splice(index, 1);

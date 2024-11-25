@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call stack and scope</title>
+</head>
+<body>
+    <script>
+setTimeout(function a(){
+    console.log("Macro Task")
+},0)
+
+
+Promise.resolve()
+.then(function b(){
+    console.log("Micro Task");
+})
+
+console.log("Call stack and scope")
+    </script>
+</body>
+</html>
