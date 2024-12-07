@@ -1,0 +1,27 @@
+.heading-tags{
+border: 1px solid;
+width: 50%;
+padding: 20px;
+text-align: center;
+}
+.text-formating{
+border: 1px solid;
+width: 50%;
+padding: 20px;
+text-align: center;
+}
+.order-list{
+border: 1px solid;
+width: 50%;
+padding: 20px;
+}
+.unorder-list{
+border: 1px solid;
+width: 50%;
+padding: 20px;
+}
+.discription-list{
+border: 1px solid;
+width: 50%;
+padding: 20px;
+}
